@@ -5,8 +5,11 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 5vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +18,10 @@ body {
   font-family: "Press Start 2P", fantasy;
   font-weight: 400;
   text-transform: uppercase;
+}
 
-  gap: 10vw;
+h1 {
+  margin-bottom: 5vw;
 }
 
 button {
@@ -33,5 +38,27 @@ button {
 }
 
 canvas {
+  position: relative;
   display: none;
+  margin-bottom: 1vw;
+}
+
+#modal {
+  display: none;
+  width: 512px;
+  height: 512px;
+  background-color: red;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 100%;
+  background-color: #000000;
+  color: #d3d3d3;
 }
