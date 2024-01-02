@@ -1,5 +1,8 @@
 const btnInitial = document.getElementById("btnInitial");
+const btnRestart = document.getElementById("btnRestart");
 let canvas = document.getElementById("snake");
+let modalEndGame = document.getElementById("modal");
+
 let context = canvas.getContext("2d");
 let box = 32;
 let count = 0;
@@ -8,6 +11,10 @@ let direction;
 btnInitial.onclick = () => {
   canvas.style.display = "initial";
   btnInitial.style.display = "none";
+};
+
+btnRestart.onclick = () => {
+  window.location.reload(true);
 };
 
 let snake = [];
@@ -51,6 +58,14 @@ function update(event) {
   if (event.keyCode === 40 && direction !== "up") direction = "down";
 }
 
+function initialMovement() {
+  const moveList = ["right", "up", "left", "down"];
+  let randomPosition = Math.floor(Math.random() * moveList.length);
+  direction = moveList[randomPosition];
+}
+
+initialMovement();
+
 function Init() {
   if (snake[0].x > 15 * box && direction !== "left") snake[0].x = 0;
   if (snake[0].x < 0 && direction !== "right") snake[0].x = 15 * box;
@@ -59,7 +74,8 @@ function Init() {
 
   for (let i = 1; i < snake.length; i++) {
     if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-      alert(`GAME OVER \n\nYou eat ${count} 🥓`);
+      modalEndGame.style.display = "initial";
+      canvas.style.display = "none";
     }
   }
 
