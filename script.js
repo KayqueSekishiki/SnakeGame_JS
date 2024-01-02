@@ -46,6 +46,12 @@ function Init() {
   if (snake[0].y > 15 * box && direction !== "up") snake[0].y = 0;
   if (snake[0].y < 0 && direction != "down") snake[0].y = 15 * box;
 
+  for (let i = 1; i < snake.length; i++) {
+    if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+      alert("GAME OVER!");
+    }
+  }
+
   CreateBG();
   CreateSnake();
   CreateFood();
