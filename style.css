@@ -30,8 +30,8 @@ button {
   color: #ffffff;
   font-weight: bold;
 
-  width: 25vw;
-  height: 10vh;
+  width: 16vw;
+  height: 8vh;
   background-color: #000000;
 
   margin-top: 10vh;
@@ -72,6 +72,6 @@ footer {
   width: 100%;
   background-color: #000000;
 
-  font-size: 2rem;
+  font-size: 1rem;
   color: #d3d3d3;
 }
