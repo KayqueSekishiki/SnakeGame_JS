@@ -6,9 +6,8 @@
 
 body {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  padding-top: 5vw;
+  width: 100vw;
+  height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -21,6 +20,7 @@ body {
 }
 
 h1 {
+  font-size: 4rem;
   margin-bottom: 5vw;
 }
 
@@ -30,11 +30,11 @@ button {
   color: #ffffff;
   font-weight: bold;
 
-  width: 200px;
-  height: 100px;
+  width: 25vw;
+  height: 10vh;
   background-color: #000000;
 
-  margin-bottom: 16px;
+  margin-top: 10vh;
 }
 
 canvas {
@@ -45,9 +45,20 @@ canvas {
 
 #modal {
   display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   width: 512px;
   height: 512px;
   background-color: red;
+
+  gap: 2rem;
+}
+
+#modal p {
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 footer {
@@ -57,8 +68,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5%;
+  height: 10vh;
   width: 100%;
   background-color: #000000;
+
+  font-size: 2rem;
   color: #d3d3d3;
 }

@@ -1,5 +1,6 @@
 const btnInitial = document.getElementById("btnInitial");
 const btnRestart = document.getElementById("btnRestart");
+const textScore = document.getElementById("textScore");
 let canvas = document.getElementById("snake");
 let modalEndGame = document.getElementById("modal");
 
@@ -74,8 +75,9 @@ function Init() {
 
   for (let i = 1; i < snake.length; i++) {
     if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-      modalEndGame.style.display = "initial";
+      modalEndGame.style.display = "flex";
       canvas.style.display = "none";
+      textScore.innerText = `Your Score: ${count}`;
     }
   }
 
